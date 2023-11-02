@@ -11,7 +11,8 @@ using DotNetBookstore.Models;
 using Microsoft.AspNetCore.Authorization;
 namespace DotNetBookstore.Controllers
 {
-    //[Authorize]
+    // make all methods private
+    [Authorize]
     public class CategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -30,7 +31,7 @@ namespace DotNetBookstore.Controllers
         }
 
         // GET: Categories/Details/5
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Categories == null)
