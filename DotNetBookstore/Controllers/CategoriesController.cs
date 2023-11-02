@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace DotNetBookstore.Controllers
 {
     // make all methods private
-    [Authorize]
+    [Authorize(Roles = "Administrator")]
     public class CategoriesController : Controller
     {
         private readonly ApplicationDbContext _context;
