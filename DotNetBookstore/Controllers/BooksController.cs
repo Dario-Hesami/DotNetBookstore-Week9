@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DotNetBookstore.Data;
 using DotNetBookstore.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DotNetBookstore.Controllers
 {
+    // Authorize admin - Administrator access only
+    [Authorize(Roles = "Administrator")]
     public class BooksController : Controller
     {
         private readonly ApplicationDbContext _context;

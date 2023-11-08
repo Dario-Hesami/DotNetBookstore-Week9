@@ -31,6 +31,10 @@ th > a {
     text-decoration: none;
 }
 
+.card-body > a {
+    text-decoration: none;
+}
+
 .navbar-dark {
     background-color: #3F51B5;
 }
